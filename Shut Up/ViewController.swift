@@ -14,6 +14,8 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.startObserving()
     }
 
     override var representedObject: AnyObject? {
@@ -21,7 +23,32 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    
+    func startObserving() {
+        let notificationCenter = NSWorkspace.sharedWorkspace().notificationCenter
+        notificationCenter.addObserverForName(NSWorkspaceScreensDidSleepNotification,
+            object: nil,
+            queue: nil) {
+                notification in
+                
+            self.mute()
+        }
+        
+    }
 
+    
+    func mute() {
+        println("mute!")
+        
+        let appleScript = NSAppleScript(source: "set volume output volume 0")
+        appleScript?.executeAndReturnError(nil)
+        
+    }
+    
+    func unmute() {
+        
+    }
 
 }
 
