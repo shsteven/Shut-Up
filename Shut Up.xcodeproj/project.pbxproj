@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B07A1BFF1C1B14CD000F8D7C /* PopStatusItem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07A1BFE1C1B14CD000F8D7C /* PopStatusItem.framework */; };
+		B07A1C011C1B1626000F8D7C /* PopStatusItem.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B07A1BFE1C1B14CD000F8D7C /* PopStatusItem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0D77C941A30A8B900538B0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D77C931A30A8B900538B0B /* AppDelegate.swift */; };
 		B0D77C961A30A8B900538B0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D77C951A30A8B900538B0B /* ViewController.swift */; };
 		B0D77C981A30A8B900538B0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0D77C971A30A8B900538B0B /* Images.xcassets */; };
@@ -24,7 +26,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B07A1C001C1B1613000F8D7C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B07A1C011C1B1626000F8D7C /* PopStatusItem.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B07A1BFE1C1B14CD000F8D7C /* PopStatusItem.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopStatusItem.framework; path = Carthage/Build/Mac/PopStatusItem.framework; sourceTree = "<group>"; };
 		B0D77C8E1A30A8B900538B0B /* Shut Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shut Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D77C921A30A8B900538B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D77C931A30A8B900538B0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07A1BFF1C1B14CD000F8D7C /* PopStatusItem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,10 +71,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B07A1BFD1C1B14BA000F8D7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B07A1BFE1C1B14CD000F8D7C /* PopStatusItem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0D77C851A30A8B900538B0B = {
 			isa = PBXGroup;
 			children = (
 				B0D77C901A30A8B900538B0B /* Shut Up */,
+				B07A1BFD1C1B14BA000F8D7C /* Frameworks */,
 				B0D77CA31A30A8B900538B0B /* Shut UpTests */,
 				B0D77C8F1A30A8B900538B0B /* Products */,
 			);
@@ -119,6 +145,7 @@
 				B0D77C8A1A30A8B900538B0B /* Sources */,
 				B0D77C8B1A30A8B900538B0B /* Frameworks */,
 				B0D77C8C1A30A8B900538B0B /* Resources */,
+				B07A1C001C1B1613000F8D7C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -153,7 +180,9 @@
 		B0D77C861A30A8B900538B0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Magical Bits";
 				TargetAttributes = {
 					B0D77C8D1A30A8B900538B0B = {
@@ -263,6 +292,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -325,8 +355,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Shut Up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.iphonesg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -336,8 +371,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Shut Up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.iphonesg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -357,6 +397,7 @@
 				);
 				INFOPLIST_FILE = "Shut UpTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.iphonesg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shut Up.app/Contents/MacOS/Shut Up";
 			};
@@ -373,6 +414,7 @@
 				);
 				INFOPLIST_FILE = "Shut UpTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.iphonesg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shut Up.app/Contents/MacOS/Shut Up";
 			};
@@ -397,6 +439,7 @@
 				B0D77CAC1A30A8B900538B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0D77CAD1A30A8B900538B0B /* Build configuration list for PBXNativeTarget "Shut UpTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +448,7 @@
 				B0D77CAF1A30A8B900538B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
