@@ -153,6 +153,8 @@
 		B0D77C861A30A8B900538B0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Magical Bits";
 				TargetAttributes = {
@@ -397,6 +399,7 @@
 				B0D77CAC1A30A8B900538B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0D77CAD1A30A8B900538B0B /* Build configuration list for PBXNativeTarget "Shut UpTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +408,7 @@
 				B0D77CAF1A30A8B900538B0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
