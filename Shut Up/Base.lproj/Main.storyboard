@@ -668,30 +668,44 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Shut_Up" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQq-17-2XX">
-                                <rect key="frame" x="47" y="76" width="386" height="118"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQq-17-2XX">
+                                <rect key="frame" x="47" y="36" width="386" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="hb3-JG-KNK"/>
+                                </constraints>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="This little app mutes your computer, when your display goes to sleep" id="qaK-AW-Ups">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7XD-R1-tSk">
+                                <rect key="frame" x="207" y="13" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KUA-bI-Jxe">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quit:" target="XfG-lQ-9wD" id="Dyd-2f-mWd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="kQq-17-2XX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="49" id="2BB-ZG-Vdu"/>
-                            <constraint firstAttribute="trailing" secondItem="kQq-17-2XX" secondAttribute="trailing" constant="49" id="F54-7S-fHF"/>
-                            <constraint firstAttribute="bottom" secondItem="kQq-17-2XX" secondAttribute="bottom" constant="76" id="c0c-3o-yEa"/>
-                            <constraint firstItem="kQq-17-2XX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="76" id="cYz-2q-Ync"/>
+                            <constraint firstItem="kQq-17-2XX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="49" id="8HX-F2-Inr"/>
+                            <constraint firstItem="kQq-17-2XX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="HPi-jF-UtS"/>
+                            <constraint firstItem="kQq-17-2XX" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="LJ2-PB-g3w"/>
+                            <constraint firstItem="kQq-17-2XX" firstAttribute="centerX" secondItem="7XD-R1-tSk" secondAttribute="centerX" id="Oyz-ar-aR6"/>
+                            <constraint firstAttribute="bottom" secondItem="7XD-R1-tSk" secondAttribute="bottom" constant="20" symbolic="YES" id="cvx-9S-sr1"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="609"/>
         </scene>
     </scenes>
 </document>
