@@ -50,5 +50,13 @@ class ViewController: NSViewController {
         
     }
 
+    
+    @IBOutlet var quit: NSButton!
+    
+    @IBAction func quit(sender: AnyObject) {
+        NSApp.terminate(self)
+    }
+    
+    
 }
 
