@@ -39,7 +39,7 @@ class ViewController: NSViewController {
 
     
     func mute() {
-        println("mute!")
+        print("mute!")
         
         let appleScript = NSAppleScript(source: "set volume output volume 0")
         appleScript?.executeAndReturnError(nil)
@@ -50,5 +50,13 @@ class ViewController: NSViewController {
         
     }
 
+    
+    @IBOutlet var quit: NSButton!
+    
+    @IBAction func quit(sender: AnyObject) {
+        NSApp.terminate(self)
+    }
+    
+    
 }
 
